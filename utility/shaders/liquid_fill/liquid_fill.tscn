@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvw8rx6auq4sy"]
+
+[ext_resource type="Shader" path="res://utility/shaders/liquid_fill/liquid_fill.gdshader" id="1_4kdyd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wgnvy"]
+shader = ExtResource("1_4kdyd")
+shader_parameter/fV = 0.3
+
+[node name="LiquidFill" type="ColorRect"]
+material = SubResource("ShaderMaterial_wgnvy")
+custom_minimum_size = Vector2(100, 100)
+offset_right = 1699.0
+offset_bottom = 1267.0

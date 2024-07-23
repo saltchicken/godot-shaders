@@ -5,12 +5,12 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pxvnf"]
 shader = ExtResource("1_hlbty")
-shader_parameter/strength = 0.035
-shader_parameter/center = Vector2(0.5, 0.515)
-shader_parameter/radius = 0.195
+shader_parameter/strength = 0.018
+shader_parameter/center = Vector2(0, 0)
+shader_parameter/radius = 0.747
 shader_parameter/aberration = 0.0
-shader_parameter/width = 0.031
-shader_parameter/feather = 0.61
+shader_parameter/width = 0.072
+shader_parameter/feather = 0.125
 
 [node name="Sprite2D" type="Sprite2D"]
 position = Vector2(575, 323)
@@ -20,7 +20,7 @@ texture = ExtResource("1_ccp30")
 [node name="DistortionShockwave" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_pxvnf")
 custom_minimum_size = Vector2(100, 100)
-offset_left = -118.889
-offset_top = -134.892
-offset_right = 113.111
-offset_bottom = 138.108
+offset_left = -145.0
+offset_top = -163.0
+offset_right = 113.0
+offset_bottom = 138.0
