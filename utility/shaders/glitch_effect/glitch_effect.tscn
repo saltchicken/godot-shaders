@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://tr7wl357qmu5"]
+
+[ext_resource type="Shader" path="res://utility/shaders/glitch_effect/glitch_effect.gdshader" id="1_8k7uu"]
+[ext_resource type="Texture2D" uid="uid://bpgn11228eeh0" path="res://icon.svg" id="1_y0l35"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g1hsc"]
+shader = ExtResource("1_8k7uu")
+shader_parameter/shake_power = 0.03
+shader_parameter/shake_rate = 0.2
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 30.5
+shader_parameter/shake_color_rate = 0.01
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(393, 277)
+texture = ExtResource("1_y0l35")
+
+[node name="GlitchEffect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_g1hsc")
+custom_minimum_size = Vector2(100, 100)
+offset_left = -391.0
+offset_top = -275.0
+offset_right = 409.0
+offset_bottom = 311.0
