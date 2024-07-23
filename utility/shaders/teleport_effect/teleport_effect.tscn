@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5omty3k6rr61"]
+
+[ext_resource type="Shader" path="res://utility/shaders/teleport_effect/teleport_effect.gdshader" id="1_2ud01"]
+[ext_resource type="Texture2D" uid="uid://bpgn11228eeh0" path="res://icon.svg" id="2_5wpdq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i0lk0"]
+shader = ExtResource("1_2ud01")
+shader_parameter/progress = 0.168
+shader_parameter/noise_desnity = 60.0
+shader_parameter/beam_size = 0.063
+shader_parameter/color = Vector4(0, 1.02, 1.2, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xfir4"]
+shader = ExtResource("1_2ud01")
+shader_parameter/progress = 0.0
+shader_parameter/noise_desnity = 60.0
+shader_parameter/beam_size = 0.01
+shader_parameter/color = Vector4(0, 1.02, 1.2, 1)
+
+[sub_resource type="Environment" id="Environment_walo7"]
+background_mode = 3
+background_energy_multiplier = 3.0
+glow_enabled = true
+glow_intensity = 5.55
+glow_strength = 1.84
+glow_blend_mode = 1
+
+[node name="Sprite2D" type="Sprite2D"]
+material = SubResource("ShaderMaterial_i0lk0")
+position = Vector2(169, 182)
+texture = ExtResource("2_5wpdq")
+
+[node name="TeleportEffect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_xfir4")
+custom_minimum_size = Vector2(100, 100)
+offset_left = 580.0
+offset_top = 33.0
+offset_right = 887.0
+offset_bottom = 296.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_walo7")
